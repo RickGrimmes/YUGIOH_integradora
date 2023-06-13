@@ -1,3 +1,48 @@
 create database workstack;
 use workstack;
+drop database workstack;
 
+create table usuarios 
+(id_usr int not null auto_increment primary key, nombre_user text not null, apellidos_user text not null, tel_user char(10) unique not null, 
+f_nacimiento date not null, direccion_user text not null, usuario varchar(60) not null unique, contraseña varchar(105) not null, 
+tipo_usuario enum('1','2'));
+
+create table calendario 
+(id_cal int not null auto_increment primary key, id_usuario int not null, foreign key(id_usuario)references usuarios(id_usr), 
+nom_evento text not null unique, fecha_cal date not null, foto_cal varchar(3) not null, notas_cal text);
+
+
+create table clientes 
+(id_cli int not null auto_increment primary key, nom_cli text not null, tel_cli char(10) not null unique, 
+id_usaurio int not null, foreign key(id_usaurio)references usuarios(id_usr));
+
+create table productos 
+(id_pro int not null auto_increment primary key, nom_p text not null, existencias int not null default(0), precio decimal(6,2) not null, 
+imagen_p varchar(3) not null, notas_prod text);
+
+create table deuda_p
+(id_dp int not null auto_increment primary key, id_clientep int not null, foreign key(id_clientep)references clientes(id_cli),
+id_p int not null, foreign key(id_p)references productos(id_pro), cantidad_p int not null, precio_p decimal(6,2) not null, 
+f_iniciop date not null, f_finalp date not null, abono_p decimal(6,2), estado_p enum('ACTIVO','INACTIVO') not null, notas text);
+
+create table deuda_c
+(id_dc int not null auto_increment primary key, id_clientec int not null, foreign key(id_clientec)references clientes(id_cli),
+id_c int not null, foreign key(id_c)references cartas(id_car), cantidad_c int not null, precio_c int not null, f_inicioc date not null,
+f_finalc date not null, abono_c decimal(6,2), estado_c enum('ACTIVO','INACTIVO') not null, notas text);
+
+create table cartas
+(id_car int not null auto_increment primary key, nombre_c text not null, imagen_c varchar(3) not null, 
+tipo_c enum('TRAMPA','MAGIA','MONSTRUO') not null);
+
+create table rareza
+(id_ra int not null auto_increment primary key, rareza enum('COMUN','RARA','SUPER RARA','ULTRA RARA','SECRETA RARA','GOLD RARA'));
+
+create table car_rar
+(id_carar int not null, foreign key(id_carar)references cartas(id_car), id_rar int not null, foreign key(id_rar)references rareza(id_ra), 
+p_price text not null, p_tcg text not null, p_beto decimal(6,2) not null);
+
+
+*vamos a ver esta de acá ABAJO* --------------------------------------
+create table acreedor
+(id_acreedor int not null auto_increment primary key, id_clientu int not null, foreign key(id_clientu)references clientes(id_cli), 
+descuento int not null);
