@@ -1,0 +1,106 @@
+
+Insert into usuarios values 
+('1','JOSHUA', 'MARTINEZ', 8715100984, '2004-02-25', 'PASEO DE LOS DELFINES','JOSHUA10','Joshua123',1),
+('','RICARDO', 'CABELLO', 8745232045, '2003-05-14', 'MONTEREAL', 'Rick10', 'Ricardo123', 2),
+('','VICTOR' , 'RAMIREZ', 8745956856, '2003-06-02', 'EDUARDO GUERRA', 'Victor10', 'Victor123', 2),
+('','Jonhatan', 'Gonzalez', 8456321478, '2003-09-28', 'RESIDEENCIAL', 'JONHA10', 'JONHATAN123', 2);
+
+insert into clientes values
+('1','Jose angel','8734560923',1),
+('','jonathan vela','8745560923',1),
+('','Duram gutierrez','8736789923',1),
+('','Dor Mir','878730923',1),
+('','jorgito martinez','8346734923',1),
+('','victor astro','8903460923',1),
+('','Rick martinz','8793450923',1),
+('','alex vela','8678960923',1);
+
+insert into cartas Values
+('1','Granguignol the Dusk Dragon','1','Monstruo'),
+('','Scareclaw Reichheart','2','Monstruo'),
+('','Solemn Judgment','3','Trampa'),
+('','Blazing Cartesia, the Virtuous','4','Monstruo'),
+('','Forbidden Lance','5','Magia'),
+('','Branded Bond','6','Magia'),
+('','Twin Twisters','7','Magia'),('','Branded Banishment','8','Trampa'),
+('','Despian Luluwalilith','9','Monstruo'),
+('','Despian Tragedy','10','Monstruo');
+
+insert into rareza values
+('1','Comun'),
+('','rara'),
+('','super rara'),
+('','ultra rara'),
+('','secreta rara'),
+('','gold rara');
+
+insert into productos values
+('1','Structure Deck: The Crimson King',10,300,'abc','Todavía no sale ajsjasj'),
+('','Structure Deck: Beware of Traptrix',15,350,'bcd','Jorgito compró como 9 ajsjasj'),
+('','Structure Deck: Dark World',12,300,'cde','No sé qué sale ajsjasj'),
+('','Structure Deck: Albaz Strike',20,400,'dfg','Yo me compré 2 uwu'),
+('','Structure Deck: FORTNITE',9,300,'fgh','Ninja skills'),
+('','Structure Deck: Database',10,200,'ghi','Victor mamaguevo'),
+('','Structure Deck: Gorditas al Carbón, REloaded',15,300,'hij','Gorditas al carbon > gorditas de harina'),
+('','Structure Deck: Pokemon edition',30,400,'ijk','Tremendo crossover'),
+('','Structure Deck: No Effects EDITION',10,300,'jkl','Aprende a leer bien y luego juegas'),
+('','Structure Deck: Jorgito Is HERE',20,900,'klm','Solo vienen niñas en pocos trapos aquí, wtf Jorgito hasta asustas a Marquitos');
+
+insert into deuda_p values
+('1',2,3,2,600,'2023-01-10',' ',150,'ACTIVO','Ta cariñoso'),
+('',2,4,3,1200,'2023-02-10','2023-02-28',1200,'inactivo','Ta cariñosote la verdad pero ya pagó'),
+('',1,1,3,900,'2023-03-12',' ',850,'ACTIVO','Pagaría en estos días'),
+('',4,4,2,800,'2023-03-16',' ',350,'ACTIVO','Puro albaz'),
+('',6,6,3,600,'2023-03-18',' ',450,'ACTIVO','Puro fk y pk locote'),
+('',8,7,2,600,'2023-04-09','2023-04-30',600,'INACTIVO','Pagó de mala gana, a él  ya no >:c'),
+('',7,10,3,2700,'2023-04-10',' ',2699,'ACTIVO','¿De verdad nos debe $1? Ni el espacio usado aquí'),
+('',5,10,2,1800,'2023-05-15',' ',1000,'ACTIVO','Cae bien, sí vamos a fiarle más'),
+('',3,1,3,900,'2023-06-11','2023-06-14',900,'INACTIVO','Ya pagó todo :D'),
+('',2,8,2,800,'2023-06-10',' ',250,'ACTIVO','Un crack la verdad pero se endeudó durisimo');
+
+insert into car_rar values
+('1','5','https://yugiohprices.com/card_price?name=Granguignol+the+Dusk+Dragon','https://www.tcgplayer.com/product/480283/yugioh-photon-hypernova-granguignol-the-dusk-dragon?xid=pi2d41cd3e-af76-48d4-b313-fdb58467e019&page=1&Language=English','500.00'),
+('2','5','https://yugiohprices.com/card_price?name=Scareclaw%20Reichheart','https://www.tcgplayer.com/product/271657/yugioh-dimension-force-scareclaw-reichheart?xid=pib31544a6-7729-40df-9b59-b6c2b457c646&Language=English&page=1','50.00'),
+('3','6','https://yugiohprices.com/card_price?name=Solemn+Judgment','https://www.tcgplayer.com/product/485649/yugioh-maze-of-memories-solemn-judgment?xid=pib4d2776b-3d35-46c0-93a8-fa325efedc79&Language=English&page=1','400.00'),
+('4','4','https://yugiohprices.com/card_price?name=Blazing+Cartesia%2C+the+Virtuous','https://www.tcgplayer.com/product/450170/yugioh-darkwing-blast-blazing-cartesia-the-virtuous?xid=pi3f1daefc-1382-4c30-8900-ac2d27c4a816&Language=English&page=1','250.00'),
+('5','1','https://yugiohprices.com/card_price?name=Forbidden+Lance','https://www.tcgplayer.com/product/138047/yugioh-starter-deck-link-strike-forbidden-lance?xid=pi8608c4dd-779b-471c-9b5f-d54047b0f05a&Language=English&page=1','100.00'),
+('6','4','https://yugiohprices.com/card_price?name=Branded+Bond','https://www.tcgplayer.com/product/245809/yugioh-dawn-of-majesty-branded-bond?xid=pi6bd5e946-b6d2-4821-b4ed-5096fe97149f&Language=English&page=1','30.00'),
+('7','2','https://yugiohprices.com/card_price?name=Twin+Twisters','https://www.tcgplayer.com/product/253967/yugioh-maximum-gold-el-dorado-twin-twisters?xid=pi9087bc9a-156a-420c-a594-d2257eabe70e&Language=English&page=1','80.00'),
+('8','1','https://yugiohprices.com/card_price?name=Branded+Banishment','https://www.tcgplayer.com/product/271764/yugioh-dimension-force-branded-banishment?xid=pi0d081a42-30f9-40f0-a857-8d1a72a085cf&Language=English&page=1','90.00'),
+('9','3','https://yugiohprices.com/card_price?name=Despian+Luluwalilith','https://www.tcgplayer.com/product/493891/yugioh-cyberstorm-access-despian-luluwalilith?xid=pi91a8631b-f437-4f64-bb3c-ecc859a8bcd3&Language=English&page=1','560.00'),
+('10','6','https://yugiohprices.com/card_price?name=Despian+Tragedy','https://www.tcgplayer.com/product/269499/yugioh-ghosts-from-the-past-the-2nd-haunting-despian-tragedy?xid=pi9f24e382-eb00-48f2-b777-35f237b67340&Language=English&page=1','1000.00'),
+('1','4','https://yugiohprices.com/card_price?name=Granguignol+the+Dusk+Dragon','https://www.tcgplayer.com/product/480284/yugioh-photon-hypernova-granguignol-the-dusk-dragon-starlight-rare?xid=pi8dbfed60-a2ca-4db2-bd5c-6f6e79fbc93f&Language=English&page=1','400.00');
+
+
+AQUÍ SI AÚN NO HAN LLENADO LO DE LAS CARTAS, SOLO VEAN EN CUÁNTO CAMBIA LA CANTIDAD SEGÚN LA ID Y AL PEGARLO EN SU GESTOR, MODIFIQUEN Y YA, O CORRANLO Y -------
+LUEGO CORRAN EL ALTER, USTEDES DECIDEN -------------------------------------------------------------------------------------------------------------------------
+alter table cartas add cantidad int;
+update cartas set cantidad='11' where id_car='1';
+update cartas set cantidad='41' where id_car='2';
+update cartas set cantidad='12' where id_car='3';
+update cartas set cantidad='33' where id_car='4';
+update cartas set cantidad='15' where id_car='5';
+update cartas set cantidad='10' where id_car='6';
+update cartas set cantidad='15' where id_car='7';
+update cartas set cantidad='21' where id_car='8';
+update cartas set cantidad='51' where id_car='9';
+update cartas set cantidad='25' where id_car='10';
+
+insert into calendario values
+('1',1, 'Nueva caja de cartas', '2023-07-01', 1, 'llega una nueva caja de cartas a el local'),
+('',2, 'carta solicitada', '2023-08-01', 1, 'llega una carta a el local'),
+('',1, 'Tapetes con nuevo disñp', '2023-07-15', 1, 'llega una nueva caja de tapetes a el local'),
+('',2, 'Caja nueva llega', '2023-08-01', 2, 'llega una nueva caja de cartas a el local, de especial'),
+('',1, 'Nueva caja de deck solicitado', '2023-08-15', 2, 'llega una nueva caja de cartas a el local, que fue solicitada');
+
+insert into deuda_c values
+('1','1','1','10','4000','2023-01-21','2023-02-01','200','activo','buenas tardes','4'),
+('','2','2','12','600','2023-02-24','2023-12-01','200','activo','buenas tardes','5'),
+('','3','3','14','5600','2023-03-16','2023-06-11','400','activo','buenas noches','6'),
+('','4','4','8','2000','2023-04-20','2023-04-09','500','activo','buenas dias','4'),
+('','5','5','4','400','2023-04-10','2023-05-8','50','activo','buenas mañanas','1'),
+('','6','6','2','60','2023-10-12','2023-10-07','0','activo','buenas jovenes','4'),
+('','7','7','18','1440','2023-09-12','2023-09-08','1000','activo','buenas ricardo','2'),
+('','8','8','9','810','2023-04-02','2023-05-04','600','activo','buenas sexooo','1'),
+('','2','9','3','5040','2023-05-01','2023-06-05','2000','activo','buenas machete','3'),
+('','5','10','1','1000','2023-12-10','2024-12-10','69','activo','jorge','6');
