@@ -105,6 +105,15 @@ insert into deuda_c values
 ('','2','9','3','5040','2023-05-01','2023-06-05','2000','activo','buenas machete','3'),
 ('','5','10','1','1000','2023-12-10','2024-12-10','69','activo','jorge','6');
 
+insert into acreedor values 
+('1', '1', '15','2023-01-16', '2023-01-22', 'HOLAAAAAAAAAAAA'),
+('', '2', '20','2023-01-30', '2023-02-05', 'HOLEEEEEEEEEEEEE'),
+('', '3', '30','2023-02-24', '2023-02-28', 'HOLIIIIIIIIIIIII'),
+('', '4', '10','2023-02-28', '2023-03-15', 'HOLOOOOOOOOOOOOO'),
+('', '5', '5','2023-05-30', '2023-06-05', 'HOLUUUUUUUUUUUUU');
+
+
+
 
 
 update deuda_c set abono_c='1440' where id_dc='7';
