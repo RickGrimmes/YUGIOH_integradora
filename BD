@@ -41,8 +41,7 @@ create table car_rar
 (id_carar int not null, foreign key(id_carar)references cartas(id_car), id_rar int not null, foreign key(id_rar)references rareza(id_ra), 
 p_price text not null, p_tcg text not null, p_beto decimal(6,2) not null);
 
-
-*vamos a ver esta de acá ABAJO* --------------------------------------
 create table acreedor
 (id_acreedor int not null auto_increment primary key, id_clientu int not null, foreign key(id_clientu)references clientes(id_cli), 
-descuento int not null);
+descuento int not null, f_inicioacreed date not null, f_finalacreed date, notas_ac text);
+
