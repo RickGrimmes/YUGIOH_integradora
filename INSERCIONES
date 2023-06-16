@@ -104,3 +104,22 @@ insert into deuda_c values
 ('','8','8','9','810','2023-04-02','2023-05-04','600','activo','buenas sexooo','1'),
 ('','2','9','3','5040','2023-05-01','2023-06-05','2000','activo','buenas machete','3'),
 ('','5','10','1','1000','2023-12-10','2024-12-10','69','activo','jorge','6');
+
+
+
+update deuda_c set abono_c='1440' where id_dc='7';
+update deuda_c set estado_c='inactivo' where id_dc='7';
+
+update deuda_c set abono_c='1000' where id_dc='10';
+update deuda_c set estado_c='inactivo' where id_dc='10';
+
+update deuda_c set abono_c='600' where id_dc='2';
+update deuda_c set estado_c='inactivo' where id_dc='2';
+
+update deuda_c set f_finalc='0000-00-00' where id_dc='1';
+update deuda_c set f_finalc='0000-00-00' where id_dc='3';
+update deuda_c set f_finalc='0000-00-00' where id_dc='4';
+update deuda_c set f_finalc='0000-00-00' where id_dc='5';
+update deuda_c set f_finalc='0000-00-00' where id_dc='6';
+update deuda_c set f_finalc='0000-00-00' where id_dc='8';
+update deuda_c set f_finalc='0000-00-00' where id_dc='9';
