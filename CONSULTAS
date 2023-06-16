@@ -1,0 +1,27 @@
+/*MOSTRAR CLIENTES DEUDORES QUE TAMBIÉN TIENEN UN CREDITO A SU FAVOR*/
+select clientes.nom_cli as CLIENTES from acreedor inner join clientes on acreedor.id_clientu=clientes.id_cli inner join (select 
+clientes.id_cli, clientes.nom_cli from cartas inner join deuda_c on cartas.id_car=deuda_c.id_c inner join clientes on 
+clientes.id_cli=deuda_c.id_clientec inner join deuda_p on clientes.id_cli=deuda_p.id_clientep inner join productos on 
+deuda_p.id_p=productos.id_pro group by clientes.nom_cli) as gg on clientes.id_cli=gg.id_cli;
+
+/*CLIENTES QUE TENGAN DEUDA EN AMBOS APARTADOS*/
+select clientes.nom_cli 'CLIENTE DEUDOR' from cartas inner join deuda_c on 
+cartas.id_car=deuda_c.id_c inner join clientes on clientes.id_cli=deuda_c.id_clientec inner join deuda_p on 
+clientes.id_cli=deuda_p.id_clientep inner join productos on deuda_p.id_p=productos.id_pro group by clientes.nom_cli;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
