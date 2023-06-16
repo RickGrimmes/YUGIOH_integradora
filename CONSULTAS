@@ -10,6 +10,75 @@ cartas.id_car=deuda_c.id_c inner join clientes on clientes.id_cli=deuda_c.id_cli
 clientes.id_cli=deuda_p.id_clientep inner join productos on deuda_p.id_p=productos.id_pro group by clientes.nom_cli;
 
 
+/*Mostrar los usuario que tengan la deuda de forma activa o inactiva junto con un historial de la deuda*/
+Select 
+clientes.nom_cli as Cliente,
+clientes.tel_cli as Telefono,
+productos.nom_p as Producto,
+productos.precio as Precio,
+deuda_p.cantidad_p as Cantidad,
+deuda_p.precio_p as 'Total a Pagar',
+deuda_p.f_iniciop as 'Inicio Deuda',
+deuda_p.f_finalp as 'Final Deuda',
+deuda_p.estado_p as 'Estado del Deudor',
+deuda_p.abono_p as Abono,
+(deuda_p.precio_p - deuda_p.abono_p) as 'Deuda Actual'
+from
+clientes inner join deuda_p on clientes.id_cli=deuda_p.id_clientep inner join productos
+on deuda_p.id_p=productos.id_pro;
+
+/*Mostrar los productos y cartas que se llevaron los clientes, el precio y si su deuda esta activa o inactiva*/
+select 
+clientes.nom_cli as 'Cliente',
+dogma.producto,
+dogma.estado as 'Estado De La Deuda',
+dogma.total as 'Total por productos',
+albaz.carta as Carta,
+albaz.estado as 'Estado De La Deuda',
+albaz.total as 'Total por cartas'
+from
+clientes
+inner join
+(Select 
+clientes.nom_cli as cliente,
+productos.nom_p as producto,
+deuda_p.estado_p as estado,
+(deuda_p.precio_p - deuda_p.abono_p) as total
+from
+clientes inner join deuda_p on clientes.id_cli=deuda_p.id_clientep inner join productos on deuda_p.id_p=productos.id_pro) as dogma
+on clientes.nom_cli=dogma.cliente 
+left join
+(Select 
+clientes.nom_cli as cliente,
+cartas.nombre_c as carta,
+deuda_c.estado_c as estado,
+(deuda_c.precio_c  - deuda_c.abono_c) as total
+from
+clientes inner join deuda_c on clientes.id_cli=deuda_c.id_clientec inner join cartas on
+deuda_c.id_c=cartas.id_car inner join car_rar on cartas.id_car=car_rar.id_carar inner join rareza on
+car_rar.id_rar=rareza.id_ra) as albaz
+on dogma.cliente=albaz.cliente 
+group by albaz.carta;
+
+/*Mostrar la informacion del cliente, detalle de la carta de compro y una historial de la deuda del cliente*/
+ Select 
+clientes.nom_cli as Cliente,
+clientes.tel_cli as Telefono,
+cartas.nombre_c as Carta,
+cartas.tipo_c as Tipo,
+rareza.rareza as Rareza,
+car_rar.p_beto as Precio,
+deuda_c.cantidad_c as Cantidad,
+deuda_c.precio_c as 'Total a Pagar',
+deuda_c.f_inicioc as 'Inicio Deuda',
+deuda_c.estado_c as 'Estado Del Deudor',
+deuda_c.abono_c as 'Abono',
+(deuda_c.precio_c - deuda_c.abono_c) as 'Deuda Actual',
+deuda_c.notas as Notas
+from
+clientes inner join deuda_c on clientes.id_cli=deuda_c.id_clientec inner join cartas on
+deuda_c.id_c=cartas.id_car inner join car_rar on cartas.id_car=car_rar.id_carar inner join rareza on
+car_rar.id_rar=rareza.id_ra
 
 
 
