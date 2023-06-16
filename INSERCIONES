@@ -123,3 +123,44 @@ update deuda_c set f_finalc='0000-00-00' where id_dc='5';
 update deuda_c set f_finalc='0000-00-00' where id_dc='6';
 update deuda_c set f_finalc='0000-00-00' where id_dc='8';
 update deuda_c set f_finalc='0000-00-00' where id_dc='9';
+
+update deuda_c set abono_c='1440' where id_dc='7';
+update deuda_c set estado_c='inactivo' where id_dc='7';
+
+update deuda_c set abono_c='1000' where id_dc='10';
+update deuda_c set estado_c='inactivo' where id_dc='10';
+
+update deuda_c set abono_c='600' where id_dc='2';
+update deuda_c set estado_c='inactivo' where id_dc='2';
+
+update deuda_c set f_finalc='0000-00-00' where id_dc='1';
+update deuda_c set f_finalc='0000-00-00' where id_dc='3';
+update deuda_c set f_finalc='0000-00-00' where id_dc='4';
+update deuda_c set f_finalc='0000-00-00' where id_dc='5';
+update deuda_c set f_finalc='0000-00-00' where id_dc='6';
+update deuda_c set f_finalc='0000-00-00' where id_dc='8';
+update deuda_c set f_finalc='0000-00-00' where id_dc='9';
+
+update deuda_c set f_inicioc='2023-01-10' where id_dc='1';
+update deuda_c set f_inicioc='2023-01-18' where id_dc='2';
+update deuda_c set f_inicioc='2023-02-01' where id_dc='3';
+update deuda_c set f_inicioc='2023-02-16' where id_dc='4';
+update deuda_c set f_inicioc='2023-02-18' where id_dc='5';
+update deuda_c set f_inicioc='2023-02-18' where id_dc='6';
+update deuda_c set f_inicioc='2023-03-11' where id_dc='7';
+update deuda_c set f_inicioc='2023-04-27' where id_dc='8';
+update deuda_c set f_inicioc='2023-05-01' where id_dc='9';
+update deuda_c set f_inicioc='2023-05-30' where id_dc='10';
+
+
+
+
+update deuda_c set f_finalc='2023-06-15' where id_dc='2';
+
+
+
+update deuda_c set f_finalc='2023-06-20' where id_dc='7';
+
+
+
+update deuda_c set f_finalc='2023-06-26' where id_dc='10';
